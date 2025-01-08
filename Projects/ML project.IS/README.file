@@ -1,0 +1,104 @@
+ YouTube Ad View Prediction
+
+This project aims to predict the number of ad views (`adview`) on YouTube videos based on various video features such as `category`, `views`, `likes`, `dislikes`, `comments`, `duration`, and more. The project employs various machine learning models to make predictions, including:
+
+- Linear Regression
+- Decision Tree Regressor
+- Random Forest Regressor
+- Artificial Neural Network (ANN)
+
+## Project Description
+------------------------
+The dataset used in this project contains information about YouTube videos, including `category`, `views`, `likes`, `dislikes`, `comments`, `duration`, and `adview` (the target variable). The main goal is to predict the number of ad views (`adview`) based on the available features using multiple machine learning models.
+
+The project covers the following steps:
+----------------------------------------
+1. **Data Preprocessing**: Handling missing data, encoding categorical variables, and converting video duration from `HH:MM:SS` to seconds.
+2. **Feature Engineering**: Cleaning and transforming the data to create a dataset that can be fed into machine learning models.
+3. **Data Visualization**: Generating plots to analyze and visualize the dataset, such as histograms, scatter plots, and correlation heatmaps.
+4. **Model Building**: Training multiple models and evaluating their performance.
+5. **Model Evaluation**: Evaluating the models using common regression metrics like Mean Absolute Error, Mean Squared Error, and Root Mean Squared Error.
+6. **Saving the Models**: Saving the best-performing models for future use.
+
+## Requirements
+---------------
+Make sure you have the following dependencies installed:
+
+pip install numpy pandas matplotlib seaborn scikit-learn keras joblib
+
+## Dataset
+---------------
+The dataset used in this project is stored in the `train - Copy.csv` file. The dataset contains the following columns:
+
+- `vidid`: Video ID
+- `category`: The category of the video (A to H)
+- `views`: The number of views the video has
+- `likes`: The number of likes the video has
+- `dislikes`: The number of dislikes the video has
+- `comment`: The number of comments the video has
+- `adview`: The target variable representing the number of ad views
+- `duration`: Duration of the video in `HH:MM:SS` format
+- `published`: The publish date of the video
+
+## Steps Involved
+-------------------
+### 1. Data Preprocessing
+       ----------------------
+- The categorical features like `category`, `duration`, `vidid`, and `published` are transformed using label encoding.
+- Non-numeric values in `views`, `likes`, `dislikes`, `comments`, and `adview` are removed.
+- The `duration` feature is converted from `HH:MM:SS` format to seconds for easier processing.
+
+### 2. Visualization
+     ------------------
+Various plots are generated to help visualize the dataset:
+
+- **Histograms** for the `category` and `adview` columns.
+- **Correlation Heatmap** to identify relationships between the different features.
+- **Time Series Plot** for ad views.
+
+### 3. Model Training and Evaluation
+      --------------------------------
+Four models are used in this project:
+
+- **Linear Regression**: A simple linear model used for predicting `adview`.
+- **Decision Tree Regressor**: A non-linear tree-based model that captures complex relationships.
+- **Random Forest Regressor**: An ensemble of decision trees for better performance and lower overfitting.
+- **Artificial Neural Network (ANN)**: A deep learning model with multiple hidden layers for non-linear predictions.
+
+### 4. Model Evaluation
+     ------------------
+The models are evaluated using the following metrics:
+
+- **Mean Absolute Error (MAE)**: Measures the average magnitude of errors in predictions.
+- **Mean Squared Error (MSE)**: Measures the average of the squares of the errors.
+- **Root Mean Squared Error (RMSE)**: Measures the square root of the MSE, which brings the error back to the original scale.
+
+### 5. Model Saving
+      ----------------
+The models are saved using the following formats:
+- The **Decision Tree Regressor** is saved using `joblib`.
+- The **Artificial Neural Network (ANN)** is saved using `h5` format.
+
+## Code Overview
+--------------------
+- **Data Preprocessing**: `LabelEncoder` is used to encode categorical columns, and `pd.to_numeric` is used to convert string columns into numerical data types.
+- **Feature Engineering**: The `duration` feature is transformed into seconds, and outliers in the `adview` feature are removed.
+- **Model Training and Evaluation**: Each model is trained and evaluated using the same training and test sets, and error metrics are printed.
+- **Model Saving**: The best models are saved using `joblib` for scikit-learn models and `h5` for the ANN model.
+
+## Files in the Repository
+------------------------------
+- **train - Copy.csv**: The dataset used in this project.
+- **model.py**: Contains the code for data preprocessing, model training, evaluation, and saving.
+- **decisiontree_youtubeadview.pkl**: Saved Decision Tree model.
+- **ann_youtubeadview.h5**: Saved Artificial Neural Network model.
+
+## Conclusion
+---------------
+This project demonstrates how machine learning can be applied to predict ad views on YouTube videos. By using different regression models, we can identify the key factors affecting ad views and help video creators and advertisers make data-driven decisions.
+
+Feel free to fork and modify the project. Contributions and suggestions are welcome!
+
+### License
+-----------
+This project is open-source under the MIT License. See the `LICENSE` file for more information.
