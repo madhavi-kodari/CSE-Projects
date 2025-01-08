@@ -1,0 +1,78 @@
+Tic-Tac-Toe Game in Java
+
+This project is a simple implementation of the classic Tic-Tac-Toe game in Java.
+It allows two players to take turns placing their marks (X or O) on a 3x3 grid.
+The game checks for a winner after every move and announces the winner when one player gets three marks in a row, column, or diagonal.
+
+## Features
+--------------
+- Two players take turns placing their marks ('X' or 'O') on a 3x3 board.
+- The game checks for a win condition after every move:
+  - Three marks in a row (horizontal, vertical, or diagonal).
+- The board is printed after every move, showing the current state.
+- If a player attempts to place a mark on an already occupied cell, they are prompted to try again.
+- The game ends when a player wins.
+
+## Technologies Used
+----------------------
+- Java
+
+## Requirements
+---------------------
+- Java Runtime Environment (JRE) installed on your machine.
+- A terminal or IDE (e.g., Eclipse, IntelliJ IDEA) to run Java programs.
+
+## Example Interaction
+------------------------
+Player X enter: 0 0
+
+X |   | 
+  |   | 
+  |   | 
+
+Player O enter: 1 1
+
+X |   | 
+  | O | 
+  |   | 
+
+Player X enter: 0 1
+
+X | X | 
+  | O | 
+  |   | 
+
+Player O enter: 2 2
+
+X | X | 
+  | O | 
+  |   | O
+
+Player X enter: 0 2
+
+X | X | X
+  | O | 
+  |   | 
+
+Player X has won!
+
+## Game Rules
+------------------
+- Player X always starts the game.
+- Players take turns entering row and column numbers (0, 1, or 2) to place their mark.
+- The game ends when either player wins or all cells are filled (in which case it results in a tie).
+- The winner is determined by having three marks (X or O) in a row, column, or diagonal.
+
+## Contributing
+-----------------
+Feel free to fork the repository, create issues, and submit pull requests. Contributions are always welcome.
+
+## License
+-------------
+This project is open-source and available under the MIT License.
+
+### Contact
+----------------
+For any questions or concerns, feel free to open an issue in the repository.
+
+Enjoy playing Tic-Tac-Toe!
