@@ -5,7 +5,6 @@ import threading
 
 # Global variables to manage alarm and fire detection state
 Alarm_Status = False  # Flag to check if the alarm is playing
-Fire_Reported = 0  # Counter to track frames with fire detected
 
 def play_alarm_sound_function():
     """
@@ -59,17 +58,13 @@ while True:
 
     # If the number of fire pixels exceeds a threshold, report fire
     if int(no_fire_pixels) > 15000:  # Adjust threshold based on the environment
-        Fire_Reported += 1
         cv2.putText(frame, "FIRE DETECTED!", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
         
         # Print a message whenever fire is detected
-        print("Fire detected! Fire Reported Count: ", Fire_Reported)
-    else:
-        Fire_Reported = max(0, Fire_Reported - 1)  # Decrease the fire report count if no fire is detected
-
-    # If fire is consistently detected, start the alarm
-    if Fire_Reported >= 3:  # Fire must be reported in 3 consecutive frames
-        if not Alarm_Status:  # Trigger the alarm if it's not already playing
+        print("Fire detected!")
+        
+        # Start the alarm if it's not already playing
+        if not Alarm_Status:
             Alarm_Status = True
             threading.Thread(target=play_alarm_sound_function, daemon=True).start()
 
