@@ -1,0 +1,53 @@
+Rock, Paper, Scissors Game in Java
+
+This project is a simple implementation of the classic "Rock, Paper, Scissors" game in Java. 
+The user competes against the computer, selecting one of the three choices: Rock (R), Paper (P), or Scissors (S). 
+The computer randomly selects one of these choices, and the winner is determined based on the rules of the game.
+
+## Features
+-------------
+- User selects Rock, Paper, or Scissors.
+- The computer randomly selects one of the choices.
+- The winner is determined based on the rules:
+  - Rock beats Scissors.
+  - Scissors beats Paper.
+  - Paper beats Rock.
+- Displays the result of the game (user wins, computer wins, or it's a tie).
+- Asks if the user wants to play again after each round.
+
+## Technologies Used
+---------------------
+- Java
+
+## Requirements
+-----------------
+- Java Runtime Environment (JRE) installed on your machine.
+- A terminal or IDE (e.g., Eclipse, IntelliJ IDEA) to run Java programs.
+
+## Example Interaction
+----------------------
+Welcome to Rock, Paper, and Scissors!
+Please choose R)ock, P)aper, or S)cissors.> R
+The computer choose Scissors.
+The user WON!
+Would you like to play again?Yes or No: Yes
+
+Welcome to Rock, Paper, and Scissors!
+Please choose R)ock, P)aper, or S)cissors.> P
+The computer choose Rock.
+The user WON!
+Would you like to play again?Yes or No: No
+
+## Contributing
+---------------
+Feel free to fork the repository, create issues, and submit pull requests. Contributions are always welcome.
+
+## License
+-----------
+This project is open-source and available under the MIT License.
+
+### Contact
+------------
+For any questions or concerns, feel free to open an issue in the repository.
+
+Enjoy playing Rock, Paper, Scissors!
