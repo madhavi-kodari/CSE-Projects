@@ -1,0 +1,51 @@
+Number Guessing Game in Java
+
+This project is a simple implementation of a number guessing game in Java.
+The program generates a random number between 1 and 100, and the user has to guess the number.
+After each guess, the program provides feedback indicating whether the guess was too high, too low, or correct. The user can keep playing as many times as they want.
+
+## Features
+---------------
+- Random number generation between 1 and 100.
+- User input is prompted to guess the number.
+- Feedback after each guess whether the input is too high or too low.
+- Tracks the number of attempts it takes the player to guess the correct number.
+- Allows the user to play multiple rounds by asking if they want to play again after correctly guessing the number.
+
+## Technologies Used
+---------------------
+- Java
+
+## Requirements
+--------------
+- Java Runtime Environment (JRE) installed on your machine.
+- A terminal or IDE (e.g., Eclipse, IntelliJ IDEA) to run Java programs.
+
+## Example Interaction
+---------------------
+Guess a number between 1 and 100:
+50
+Your guess is too high, try again.
+Guess a number between 1 and 100:
+25
+Your guess is too low, try again.
+Guess a number between 1 and 100:
+37
+Awesome! You guessed the number!
+It only took you 3 guesses!
+Would you like to play again? Yes or No:
+```
+
+## Contributing
+----------------
+Feel free to fork the repository, create issues, and submit pull requests. Contributions are always welcome.
+
+## License
+-----------
+This project is open-source and available under the MIT License.
+
+### Contact
+-----------
+For any questions or concerns, feel free to open an issue in the repository.
+
+Happy guessing!
